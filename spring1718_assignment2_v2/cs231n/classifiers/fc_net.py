@@ -191,6 +191,13 @@ class FullyConnectedNet(object):
         for i in range(self.num_layers - 2):
             self.params["W" + str(i + 2)] = np.random.randn(hidden_dims[i], hidden_dims[i + 1]) * weight_scale
             self.params["b" + str(i + 2)] = np.zeros(hidden_dims[i + 1])
+            if self.normalization:
+                self.params['gamma' + str(i + 1)] = np.ones(hidden_dims[i])
+                self.params['beta' + str(i + 1)] = np.zeros(hidden_dims[i])
+
+        if self.normalization:
+            self.params['gamma' + str(self.num_layers - 1)] = np.ones(hidden_dims[-1])
+            self.params['beta' + str(self.num_layers - 1)] = np.zeros(hidden_dims[-1])
 
         self.params["W" + str(self.num_layers)] = np.random.randn(hidden_dims[-1], num_classes) * weight_scale
         self.params["b" + str(self.num_layers)] = np.zeros(num_classes)
@@ -255,17 +262,22 @@ class FullyConnectedNet(object):
         ############################################################################
 
         hidden_layers, caches = list(range(self.num_layers + 1)), list(range(self.num_layers + 1))
+        hidden_layers[1] = X
 
-        hidden_layers[1], caches[1] = affine_relu_forward(X, self.params["W" + str(1)], self.params["b" + str(1)])
+        for i in range(self.num_layers):
+            W, b = self.params["W" + str(i + 1)], self.params["b" + str(i + 1)]
 
-        for i in range(self.num_layers - 1):
-            W, b = self.params["W" + str(i + 2)], self.params["b" + str(i + 2)]
-            if i != self.num_layers - 2:
-                hidden_layers[i + 2], caches[i + 2] = affine_relu_forward(hidden_layers[i + 1], W, b)
+            if i == self.num_layers - 1:
+                scores, caches[i + 1] = affine_forward(hidden_layers[i + 1], W, b)
             else:
-                scores, caches[i + 2] = affine_forward(hidden_layers[i + 1], W, b)
-
-
+                if self.normalization == 'batchnorm':
+                    hidden_layers[i + 2], caches[i + 1] =\
+                        affine_bn_relu_forward(hidden_layers[i + 1], W, b, self.params['gamma' + str(i + 1)], self.params['beta' + str(i + 1)], self.bn_params[i])
+                elif self.normalization == 'layernorm':
+                    hidden_layers[i + 2], caches[i + 1] =\
+                        affine_ln_relu_forward(hidden_layers[i + 1], W, b, self.params['gamma' + str(i + 1)], self.params['beta' + str(i + 1)], self.bn_params[i])
+                else:
+                    hidden_layers[i + 2], caches[i + 1] = affine_relu_forward(hidden_layers[i + 1], W, b)
 
         ############################################################################
         #                             END OF YOUR CODE                             #
@@ -298,8 +310,14 @@ class FullyConnectedNet(object):
             if i == self.num_layers:
                 dhidden[i - 1], grads["W" + str(i)], grads["b" + str(i)] = affine_backward(dhidden[i], caches[i])
             else:
-                dhidden[i - 1], grads["W" + str(i)], grads["b" + str(i)] = affine_relu_backward(dhidden[i], caches[i])
+                if self.normalization == 'batchnorm':
+                    dhidden[i - 1], grads["W" + str(i)], grads["b" + str(i)], grads["gamma" + str(i)], grads['beta' + str(i)] = affine_bn_relu_backward(dhidden[i], caches[i])
+                elif self.normalization == 'layernorm':
+                    dhidden[i - 1], grads["W" + str(i)], grads["b" + str(i)], grads["gamma" + str(i)], grads['beta' + str(i)] = affine_ln_relu_backward(dhidden[i], caches[i])
+                else:
+                    dhidden[i - 1], grads["W" + str(i)], grads["b" + str(i)] = affine_relu_backward(dhidden[i], caches[i])
             loss += 0.5 * self.reg * np.sum(self.params["W" + str(i)] * self.params["W" + str(i)])
+
             grads["W" + str(i)] += self.reg * self.params["W" + str(i)]
 
 

@@ -190,7 +190,15 @@ def batchnorm_forward(x, gamma, beta, bn_param):
         # Referencing the original paper (https://arxiv.org/abs/1502.03167)   #
         # might prove to be helpful.                                          #
         #######################################################################
-        pass
+
+        sample_mean, sample_var = np.mean(x, axis=0), np.var(x, axis=0)
+        temp = (x - sample_mean) / np.sqrt(sample_var + eps)
+        out = gamma * temp + beta
+        cache = (x, gamma, eps, sample_mean, sample_var, temp)
+
+        running_mean = momentum * running_mean + (1 - momentum) * sample_mean
+        running_var = momentum * running_var + (1 - momentum) * sample_var
+
         #######################################################################
         #                           END OF YOUR CODE                          #
         #######################################################################
@@ -201,7 +209,10 @@ def batchnorm_forward(x, gamma, beta, bn_param):
         # then scale and shift the normalized data using gamma and beta.      #
         # Store the result in the out variable.                               #
         #######################################################################
-        pass
+
+        temp = (x - running_mean) / np.sqrt(running_var + eps)
+        out = gamma * temp + beta
+
         #######################################################################
         #                          END OF YOUR CODE                           #
         #######################################################################
@@ -239,7 +250,20 @@ def batchnorm_backward(dout, cache):
     # Referencing the original paper (https://arxiv.org/abs/1502.03167)       #
     # might prove to be helpful.                                              #
     ###########################################################################
-    pass
+
+    x, gamma, eps, sample_mean, sample_var, temp = cache
+    N, D = x.shape
+
+    dgamma = np.sum(dout * temp, axis=0)
+    dbeta = np.sum(dout, axis=0)
+    dsam_var = -0.5 * np.sum(dout * gamma * (x - sample_mean), axis=0) * (sample_var + eps)**(-1.5)
+    dsam_mean = -1.0 * np.sum(dout * gamma * (sample_var + eps)**(-0.5), axis=0) - 2.0 * dsam_var * np.mean(x - sample_mean, axis=0)
+
+    dx = dsam_mean / N\
+        + 2.0 * dsam_var * (x - sample_mean) / N\
+        + dout * gamma * (sample_var + eps)**(-0.5)
+
+
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -270,7 +294,19 @@ def batchnorm_backward_alt(dout, cache):
     # should be able to compute gradients with respect to the inputs in a     #
     # single statement; our implementation fits on a single 80-character line.#
     ###########################################################################
-    pass
+    # 没画出来计算图，直接用了公式计算
+    x, gamma, eps, sample_mean, sample_var, temp = cache
+    N, D = x.shape
+
+    dgamma = np.sum(dout * temp, axis=0)
+    dbeta = np.sum(dout, axis=0)
+    dsam_var = -0.5 * np.sum(dout * gamma * (x - sample_mean), axis=0) * (sample_var + eps)**(-1.5)
+    dsam_mean = -1.0 * np.sum(dout * gamma * (sample_var + eps)**(-0.5), axis=0) - 2.0 * dsam_var * np.mean(x - sample_mean, axis=0)
+
+    dx = dsam_mean / N\
+        + 2.0 * dsam_var * (x - sample_mean) / N\
+        + dout * gamma * (sample_var + eps)**(-0.5)
+
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -284,7 +320,7 @@ def layernorm_forward(x, gamma, beta, ln_param):
 
     During both training and test-time, the incoming data is normalized per data-point,
     before being scaled by gamma and beta parameters identical to that of batch normalization.
-    
+
     Note that in contrast to batch normalization, the behavior during train and test-time for
     layer normalization are identical, and we do not need to keep track of running averages
     of any sort.
@@ -312,7 +348,14 @@ def layernorm_forward(x, gamma, beta, ln_param):
     # transformations you could perform, that would enable you to copy over   #
     # the batch norm code and leave it almost unchanged?                      #
     ###########################################################################
-    pass
+
+    sample_mean, sample_var = np.mean(x, axis=1), np.var(x, axis=1)
+    sample_mean, sample_var = sample_mean.reshape(-1, 1), sample_var.reshape(-1, 1)
+    temp = (x - sample_mean) / np.sqrt((sample_var + eps))
+    out = gamma * temp + beta
+
+    cache = (x, gamma, eps, sample_mean, sample_var, temp)
+
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -343,7 +386,20 @@ def layernorm_backward(dout, cache):
     # implementation of batch normalization. The hints to the forward pass    #
     # still apply!                                                            #
     ###########################################################################
-    pass
+
+    x, gamma, eps, sample_mean, sample_var, temp = cache
+
+    N, D = x.shape
+
+    dgamma = np.sum(dout * temp, axis=0)
+    dbeta = np.sum(dout, axis=0)
+
+    dx_hat = dout * gamma
+    dvar = np.sum(dx_hat * (x - sample_mean) * -0.5 * np.power(sample_var + eps, -1.5), axis=1)
+    dmean = np.sum(dx_hat * -1 / np.sqrt(sample_var + eps), axis=1) + dvar * np.mean(-2 * (x - sample_mean), axis=1)
+    dx = 1 / np.sqrt(sample_var + eps) * dx_hat + dvar.reshape(-1, 1) * 2.0 / D * (x - sample_mean) + 1.0 / D * dmean.reshape(-1, 1)
+
+
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
