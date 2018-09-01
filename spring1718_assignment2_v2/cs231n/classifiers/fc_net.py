@@ -262,6 +262,7 @@ class FullyConnectedNet(object):
         ############################################################################
 
         hidden_layers, caches = list(range(self.num_layers + 1)), list(range(self.num_layers + 1))
+        dp_caches = list(range(self.num_layers + 1))
         hidden_layers[1] = X
 
         for i in range(self.num_layers):
@@ -279,6 +280,8 @@ class FullyConnectedNet(object):
                 else:
                     hidden_layers[i + 2], caches[i + 1] = affine_relu_forward(hidden_layers[i + 1], W, b)
 
+                if self.use_dropout:
+                    hidden_layers[i + 2], dp_caches[i + 1] = dropout_forward(hidden_layers[i + 2], self.dropout_param)
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################
@@ -310,6 +313,8 @@ class FullyConnectedNet(object):
             if i == self.num_layers:
                 dhidden[i - 1], grads["W" + str(i)], grads["b" + str(i)] = affine_backward(dhidden[i], caches[i])
             else:
+                if self.use_dropout:
+                    dhidden[i] = dropout_backward(dhidden[i], dp_caches[i])
                 if self.normalization == 'batchnorm':
                     dhidden[i - 1], grads["W" + str(i)], grads["b" + str(i)], grads["gamma" + str(i)], grads['beta' + str(i)] = affine_bn_relu_backward(dhidden[i], caches[i])
                 elif self.normalization == 'layernorm':
