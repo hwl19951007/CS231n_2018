@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="578708a2-b010-428a-ab7b-b543d72b3071" name="Default" comment="assigment3_LSTM_Captioning">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/NetworkVisualization-TensorFlow-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/LSTM_Captioning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/LSTM_Captioning.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="rnn_layers.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="818">
+              <caret line="413" selection-start-line="413" selection-end-line="413" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rnn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4266">
+              <caret line="242" column="83" selection-start-line="242" selection-start-column="83" selection-end-line="242" selection-end-column="83" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>get</find>
+      <find>reg</find>
+      <find>dw</find>
+      <find>W</find>
+      <find>y</find>
+      <find>so</find>
+      <find>classifier</find>
+      <find>input_size</find>
+      <find>X</find>
+      <find>softmax</find>
+      <find>scores</find>
+      <find>xrange</find>
+      <find>print</find>
+      <find>relu</find>
+      <find>affine_</find>
+      <find>ba</find>
+      <find>batch</find>
+      <find>train</find>
+      <find>model</find>
+      <find>pr</find>
+      <find>drop</find>
+      <find>dropout</find>
+      <find>dropout_</find>
+      <find>seed</find>
+      <find>affine</find>
+      <find>vanilla</find>
+      <find>tanh</find>
+      <find>affine_backward</find>
+      <find>tmp</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/assignment1/cs231n/classifiers/k_nearest_neighbor.py" />
+        <option value="$PROJECT_DIR$/assignment1/cs231n/classifiers/linear_svm.py" />
+        <option value="$PROJECT_DIR$/assignment1/cs231n/classifiers/linear_classifier.py" />
+        <option value="$PROJECT_DIR$/assignment1/cs231n/classifiers/softmax.py" />
+        <option value="$PROJECT_DIR$/assignment1/cs231n/classifiers/neural_net.py" />
+        <option value="$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/gradient_check.py" />
+        <option value="$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/optim.py" />
+        <option value="$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/solver.py" />
+        <option value="$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layer_utils.py" />
+        <option value="$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/fc_net.py" />
+        <option value="$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/cnn.py" />
+        <option value="$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layers.py" />
+        <option value="$PROJECT_DIR$/assignment3/cs231n/image_utils.py" />
+        <option value="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" />
+        <option value="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="y" value="2" />
+    <option name="width" value="1932" />
+    <option name="height" value="1045" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CS231n" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS231n" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS231n" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS231n" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS231n" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS231n" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment3" type="462c0819:PsiDirectoryNode" />
+              <item name="cs231n" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS231n" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS231n" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment3" type="462c0819:PsiDirectoryNode" />
+              <item name="cs231n" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="D:/Anaconda3" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python\Workspace\CS231n\spring1718_assignment2_v2\cs231n\datasets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python\Workspace\CS231n" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="578708a2-b010-428a-ab7b-b543d72b3071" name="Default" comment="" />
+      <created>1534156802974</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534156802974</updated>
+    </task>
+    <task id="LOCAL-00001" summary="assigment1">
+      <created>1534236719754</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1534236719772</updated>
+    </task>
+    <task id="LOCAL-00002" summary="assigment1">
+      <created>1534239720740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534239720740</updated>
+    </task>
+    <task id="LOCAL-00003" summary="assigment1_SVM">
+      <created>1534305222919</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534305222919</updated>
+    </task>
+    <task id="LOCAL-00004" summary="assigment1_Softmax">
+      <created>1534319551411</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1534319551411</updated>
+    </task>
+    <task id="LOCAL-00005" summary="assigment1_Two_layer_neural_net">
+      <created>1534402562054</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1534402562054</updated>
+    </task>
+    <task id="LOCAL-00006" summary="assigment1_Image_features">
+      <created>1534410377560</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1534410377560</updated>
+    </task>
+    <task id="LOCAL-00007" summary="assigment2">
+      <created>1534666568831</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1534666568831</updated>
+    </task>
+    <task id="LOCAL-00008" summary="assigment2_Fully_Connected_Nets">
+      <created>1534813196346</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1534813196346</updated>
+    </task>
+    <task id="LOCAL-00009" summary="assigment2_BatchNormalization">
+      <created>1535788822932</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1535788822932</updated>
+    </task>
+    <task id="LOCAL-00010" summary="assigment2_Dropout">
+      <created>1535801602248</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1535801602248</updated>
+    </task>
+    <task id="LOCAL-00011" summary="assigment2_ConvolutionalNetworks">
+      <created>1536059596271</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1536059596271</updated>
+    </task>
+    <task id="LOCAL-00012" summary="assigment2_TensorFlow">
+      <created>1536145299062</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1536145299062</updated>
+    </task>
+    <task id="LOCAL-00013" summary="assigment2_finish">
+      <created>1536145321923</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1536145321923</updated>
+    </task>
+    <task id="LOCAL-00014" summary="assigment3">
+      <created>1536403401195</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1536403401195</updated>
+    </task>
+    <task id="LOCAL-00015" summary="assigment3_RNN_Captioning">
+      <created>1536570507341</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1536570507341</updated>
+    </task>
+    <task id="LOCAL-00016" summary="assigment3_LSTM_Captioning">
+      <created>1536647885224</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1536647885224</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22239584" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947917" weight="0.32978722" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="assigment1" />
+    <MESSAGE value="assigment1_SVM" />
+    <MESSAGE value="assigment1_Softmax" />
+    <MESSAGE value="assigment1_Two_layer_neural_net" />
+    <MESSAGE value="assigment1_Image_features" />
+    <MESSAGE value="assigment2" />
+    <MESSAGE value="assigment2_Fully_Connected_Nets" />
+    <MESSAGE value="assigment2_BatchNormalization" />
+    <MESSAGE value="assigment2_Dropout" />
+    <MESSAGE value="assigment2_ConvolutionalNetworks" />
+    <MESSAGE value="assigment2_TensorFlow" />
+    <MESSAGE value="assigment2_finish" />
+    <MESSAGE value="assigment3" />
+    <MESSAGE value="assigment3_RNN_Captioning" />
+    <MESSAGE value="assigment3_LSTM_Captioning" />
+    <option name="LAST_COMMIT_MESSAGE" value="assigment3_LSTM_Captioning" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/fc_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2016">
+          <caret line="112" selection-start-line="112" selection-end-line="118" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/optim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2826">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3996">
+          <caret line="222" column="43" selection-start-line="222" selection-start-column="43" selection-end-line="222" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layer_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="151" column="41" lean-forward="true" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/gradient_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="34" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12150">
+          <caret line="675" selection-start-line="675" selection-end-line="675" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/fc_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5526">
+          <caret line="307" column="47" selection-start-line="307" selection-start-column="47" selection-end-line="307" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/optim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2826">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3978">
+          <caret line="222" column="43" selection-start-line="222" selection-start-column="43" selection-end-line="222" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layer_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/fast_layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/gradient_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="34" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4104">
+          <caret line="228" column="35" selection-start-line="228" selection-start-column="4" selection-end-line="228" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/optim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2826">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3330">
+          <caret line="186" column="25" lean-forward="true" selection-start-line="186" selection-start-column="25" selection-end-line="186" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layer_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/fc_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5508">
+          <caret line="311" column="81" selection-start-line="311" selection-start-column="81" selection-end-line="311" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/gradient_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="34" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/fc_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5400">
+          <caret line="300" column="111" lean-forward="true" selection-start-line="300" selection-start-column="111" selection-end-line="300" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/optim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2826">
+          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3978">
+          <caret line="222" column="45" lean-forward="true" selection-start-line="222" selection-start-column="36" selection-end-line="222" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layer_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4608">
+          <caret line="256" column="40" lean-forward="true" selection-start-line="256" selection-start-column="40" selection-end-line="256" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/neural_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3294">
+          <caret line="183" column="75" selection-start-line="183" selection-start-column="75" selection-end-line="183" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/linear_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/k_nearest_neighbor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="165" column="57" lean-forward="true" selection-start-line="165" selection-start-column="57" selection-end-line="165" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/linear_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/.ipynb_checkpoints/features-checkpoint.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/.ipynb_checkpoints/features-checkpoint.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/softmax.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/k_nearest_neighbor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="165" column="57" selection-start-line="165" selection-start-column="57" selection-end-line="165" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/data_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2559">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/features.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/linear_svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="81" column="37" lean-forward="true" selection-start-line="81" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/neural_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="229" column="5" lean-forward="true" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/linear_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="71" column="36" selection-start-line="71" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/gradient_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="34" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/optim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2826">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3996">
+          <caret line="222" column="43" selection-start-line="222" selection-start-column="43" selection-end-line="222" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/fast_layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/fc_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2016">
+          <caret line="112" selection-start-line="112" selection-end-line="118" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/RNN_Captioning.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layer_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1484">
+          <caret line="151" column="41" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/cs231n/datasets/get_assignment3_data.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment1/cs231n/classifiers/softmax.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/classifiers/cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring1718_assignment2_v2/cs231n/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/cs231n/image_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4266">
+          <caret line="242" column="83" selection-start-line="242" selection-start-column="83" selection-end-line="242" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="413" selection-start-line="413" selection-end-line="413" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
