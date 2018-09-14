@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="578708a2-b010-428a-ab7b-b543d72b3071" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/NetworkVisualization-TensorFlow-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/NetworkVisualization-TensorFlow-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/NetworkVisualization-TensorFlow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/NetworkVisualization-TensorFlow.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/GANs-TensorFlow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/GANs-TensorFlow.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +17,7 @@
       <file leaf-file-name="rnn_layers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="818">
+            <state relative-caret-position="7398">
               <caret line="413" selection-start-line="413" selection-end-line="413" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="squeezenet.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment3/cs231n/classifiers/squeezenet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+            <state relative-caret-position="-622">
+              <caret line="32" column="63" lean-forward="true" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -52,7 +51,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get</find>
       <find>reg</find>
       <find>dw</find>
       <find>W</find>
@@ -82,6 +80,7 @@
       <find>affine_backward</find>
       <find>tmp</find>
       <find>self.scores</find>
+      <find>init</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -293,7 +292,21 @@
       <option name="project" value="LOCAL" />
       <updated>1536670061518</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="assigment3_NetwordVisualization">
+      <created>1536818570662</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1536818570662</updated>
+    </task>
+    <task id="LOCAL-00019" summary="assigment3_StyleTransfer">
+      <created>1536824399827</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1536824399827</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -347,7 +360,9 @@
     <MESSAGE value="assigment3" />
     <MESSAGE value="assigment3_RNN_Captioning" />
     <MESSAGE value="assigment3_LSTM_Captioning" />
-    <option name="LAST_COMMIT_MESSAGE" value="assigment3_LSTM_Captioning" />
+    <MESSAGE value="assigment3_NetwordVisualization" />
+    <MESSAGE value="assigment3_StyleTransfer" />
+    <option name="LAST_COMMIT_MESSAGE" value="assigment3_StyleTransfer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -694,7 +709,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="818">
+        <state relative-caret-position="7398">
           <caret line="413" selection-start-line="413" selection-end-line="413" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
@@ -711,8 +726,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment3/cs231n/classifiers/squeezenet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+        <state relative-caret-position="-622">
+          <caret line="32" column="63" lean-forward="true" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
         </state>
       </provider>
     </entry>
